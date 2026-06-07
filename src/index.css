@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    cursor: none;
+    scroll-behavior: smooth;
+  }
+
+  * {
+    cursor: none !important;
+  }
+
+  body {
+    font-family: 'Nunito Sans', system-ui, sans-serif;
+    background-color: #FDF8F0;
+    color: #2A2420;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 2px 20px rgba(212, 175, 55, 0.3);
+  }
+
+  .gradient-gold {
+    background: linear-gradient(135deg, #D4AF37 0%, #F6D860 50%, #D4AF37 100%);
+  }
+
+  .gradient-hero {
+    background: linear-gradient(160deg, #2A1F15 0%, #3D2E20 30%, #1F2A1A 70%, #1A2015 100%);
+  }
+
+  .gradient-warm {
+    background: linear-gradient(180deg, #FDF8F0 0%, #F5E6DC 100%);
+  }
+}
+
+/* Scroll fade-in animation */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Gold divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+/* Navigation scroll effect */
+.nav-scrolled {
+  background: rgba(253, 248, 240, 0.95) !important;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(212, 175, 55, 0.1);
+}
